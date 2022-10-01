@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="assets/css/stzyle.css" />
+        <title>Document</title>
+    </head>
+    <body>
+        <header>
+            <h1>Mehrwertsteuer-Rechner</h1>
+        </header>
+        <section>
+            <article>
+                <form onsubmit="return false">
+                    <div class="options">
+                        <p>Was soll berechnet werden ?</p>
+                        <div>
+                            <input
+                                type="radio"
+                                name="type-of-amount"
+                                id="net-to-gross"
+                            />
+                            <label for="net-to-gross">
+                                Mehrwertsteuer aufschlagen (Netto zu
+                                Brutto)</label
+                            >
+                        </div>
+                        <div>
+                            <input
+                                type="radio"
+                                name="type-of-amount"
+                                id="gross-to-net"
+                            />
+                            <label for="gross-to-net">
+                                Mehrwertsteuer aufschlagen (Brutto zu
+                                Netto)</label
+                            >
+                        </div>
+                    </div>
+                    <div class="value-selection">
+                        <input type="radio" name="percentage" id="19%" />
+                        <label for="19%"> 19%</label>
+                        <input type="radio" name="percentage" id="7%" />
+                        <label for="7%"> 7%</label>
+                    </div>
+                    <div class="amount">
+                        <p>Nettobetrag(Preis ohne Mehrwertsteuer) in Euro*</p>
+                        <p>
+                            Bruttobetrag(Preis inklusive Mehrwertsteuer) in Euro
+                        </p>
+                        <input type="text" name="submit" id="amount" />
+                        <input
+                            type="submit"
+                            value="BERECHNEN"
+                            id="submit"
+                            onclick="calculate()"
+                        />
+                    </div>
+                </form>
+                <div class="results">
+                    <div class="tax-amount">
+                        <h4>Ergebnis</h4>
+                        <p>Mehrwertsteuer</p>
+                        <div class="display-tax" id="display-tax"></div>
+                    </div>
+                    <div class="total-amount">
+                        <p id="amount-gross">Bruttobetrag(Endpreis)</p>
+                        <p id="amount-net">Nettobetrag</p>
+                        <div class="display-amount" id="display-amount"></div>
+                    </div>
+                </div>
+            </article>
+        </section>
+        <script src="main.js"></script>
+    </body>
+</html>

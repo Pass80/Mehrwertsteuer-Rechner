@@ -45,7 +45,6 @@ div {
     height: 2rem;
 }
 
-#amount-gross,
 #amount-net {
     display: none;
 }

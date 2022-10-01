@@ -21,6 +21,8 @@
                                 type="radio"
                                 name="type-of-amount"
                                 id="net-to-gross"
+                                checked="true"
+                                onchange="showText1()"
                             />
                             <label for="net-to-gross">
                                 Mehrwertsteuer aufschlagen (Netto zu
@@ -32,6 +34,7 @@
                                 type="radio"
                                 name="type-of-amount"
                                 id="gross-to-net"
+                                onchange="showText2()"
                             />
                             <label for="gross-to-net">
                                 Mehrwertsteuer aufschlagen (Brutto zu
@@ -47,7 +50,9 @@
                         <label for="7%"> 7%</label>
                     </div>
                     <div class="amount">
-                        <p id="title">&nbsp;</p>
+                        <p id="title">
+                            Nettobetrag(Preis ohne Mehrwertsteuer) in Euro
+                        </p>
                         <input
                             type="number"
                             name="submit"
@@ -69,7 +74,9 @@
                         <div class="display-tax" id="display-tax">&nbsp;</div>
                     </div>
                     <div class="total-amount">
-                        <p id="amount-gross">Bruttobetrag(Endpreis)</p>
+                        <p id="amount-gross" class="net">
+                            Bruttobetrag(Endpreis)
+                        </p>
                         <p id="amount-net">Nettobetrag</p>
                         <div class="display-amount" id="display-amount">
                             &nbsp;

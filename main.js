@@ -15,20 +15,34 @@ let tax = null;
 const title1 = 'Nettobetrag(Preis ohne Mehrwertsteuer) in Euro';
 const title2 = 'Bruttobetrag(Preis inklusive Mehrwertsteuer) in Euro';
 
+const showText1 = () => {
+    title.innerHTML = title1;
+    amountNet.style.display = 'none';
+    amountGross.style.display = 'block';
+    amountGross.innerHTML = ' Bruttobetrag(Endpreis)';
+};
+
+const showText2 = () => {
+    title.innerHTML = title2;
+    amountGross.style.display = 'none';
+    amountNet.style.display = 'block';
+    amountNet.innerHTML = ' Nettobetrag';
+};
+
 //  put this block of code in a function to avoid code repetition
 const displayGrossAndTax = () => {
-    displayTax.innerHTML = tax.toFixed(1);
+    displayTax.innerHTML = tax.toFixed(2);
     result = +enteredAmount.value + tax;
-    displayAmount.innerHTML = result.toFixed(1);
+    displayAmount.innerHTML = result.toFixed(2);
     amountNet.style.display = 'none';
     amountGross.style.display = 'block';
 };
 
 //  put this block of code in a function to avoid code repetition
 const displayNetAndTax = () => {
-    displayAmount.innerHTML = result.toFixed(1);
+    displayAmount.innerHTML = result.toFixed(2);
     tax = +enteredAmount.value - result;
-    displayTax.innerHTML = tax.toFixed(1);
+    displayTax.innerHTML = tax.toFixed(2);
     amountGross.style.display = 'none';
     amountNet.style.display = 'block';
 };

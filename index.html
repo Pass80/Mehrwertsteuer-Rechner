@@ -22,7 +22,7 @@
                                 name="type-of-amount"
                                 id="net-to-gross"
                                 checked="true"
-                                onchange="showText1()"
+                                onchange="showText1(), calculate()"
                             />
                             <label for="net-to-gross">
                                 Mehrwertsteuer aufschlagen (Netto zu
@@ -34,7 +34,7 @@
                                 type="radio"
                                 name="type-of-amount"
                                 id="gross-to-net"
-                                onchange="showText2()"
+                                onchange="showText2(), calculate()"
                             />
                             <label for="gross-to-net">
                                 Mehrwertsteuer aufschlagen (Brutto zu
@@ -44,9 +44,19 @@
                     </div>
                     <div class="value-selection">
                         <p>Mehrwertsteuersatz</p>
-                        <input type="radio" name="percentage" id="19%" />
+                        <input
+                            type="radio"
+                            name="percentage"
+                            id="19%"
+                            onchange="calculate()"
+                        />
                         <label for="19%"> 19%</label>
-                        <input type="radio" name="percentage" id="7%" />
+                        <input
+                            type="radio"
+                            name="percentage"
+                            id="7%"
+                            onchange="calculate()"
+                        />
                         <label for="7%"> 7%</label>
                     </div>
                     <div class="amount">

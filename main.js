@@ -44,16 +44,32 @@ const displayNetAndTax = () => {
 };
 
 const calculate = () => {
-    if (netToGross.checked && percent_19.checked) {
+    if (
+        netToGross.checked &&
+        percent_19.checked &&
+        enteredAmount.value.trim() !== ''
+    ) {
         tax = (enteredAmount.value * 19) / 100;
         displayGrossAndTax();
-    } else if (netToGross.checked && percent_7.checked) {
+    } else if (
+        netToGross.checked &&
+        percent_7.checked &&
+        enteredAmount.value.trim() !== ''
+    ) {
         tax = (enteredAmount.value * 7) / 100;
         displayGrossAndTax();
-    } else if (grossToNet.checked && percent_19.checked) {
+    } else if (
+        grossToNet.checked &&
+        percent_19.checked &&
+        enteredAmount.value.trim() !== ''
+    ) {
         result = enteredAmount.value / 1.19;
         displayNetAndTax();
-    } else if (grossToNet.checked && percent_7.checked) {
+    } else if (
+        grossToNet.checked &&
+        percent_7.checked &&
+        enteredAmount.value.trim() !== ''
+    ) {
         result = enteredAmount.value / 1.07;
         displayNetAndTax();
     }

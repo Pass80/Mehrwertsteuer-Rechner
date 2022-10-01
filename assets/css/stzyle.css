@@ -12,6 +12,7 @@ header {
 
 article {
     width: 50%;
+    height: 50vh;
     margin: 0 auto;
     background-color: rgb(185, 223, 239);
     padding: 1rem;
@@ -26,4 +27,9 @@ article {
 .amount {
     display: flex;
     flex-direction: column;
+}
+
+#amount-gross,
+#amount-net {
+    display: none;
 }

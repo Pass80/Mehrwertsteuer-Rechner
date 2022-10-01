@@ -8,9 +8,12 @@ const displayTax = document.getElementById('display-tax');
 const displayAmount = document.getElementById('display-amount');
 const amountGross = document.getElementById('amount-gross');
 const amountNet = document.getElementById('amount-net');
+const title = document.getElementById('title');
 
 let result = null;
 let tax = null;
+const title1 = 'Nettobetrag(Preis ohne Mehrwertsteuer) in Euro';
+const title2 = 'Bruttobetrag(Preis inklusive Mehrwertsteuer) in Euro';
 
 //  put this block of code in a function to avoid code repetition
 const displayGrossAndTax = () => {
@@ -32,15 +35,19 @@ const displayNetAndTax = () => {
 
 const calculate = () => {
     if (netToGross.checked && percent_19.checked) {
+        title.innerHTML = title1;
         tax = (enteredAmount.value * 19) / 100;
         displayGrossAndTax();
     } else if (netToGross.checked && percent_7.checked) {
+        title.innerHTML = title1;
         tax = (enteredAmount.value * 7) / 100;
         displayGrossAndTax();
     } else if (grossToNet.checked && percent_19.checked) {
+        title.innerHTML = title2;
         result = enteredAmount.value / 1.19;
         displayNetAndTax();
     } else {
+        title.innerHTML = title2;
         result = enteredAmount.value / 1.07;
         displayNetAndTax();
     }

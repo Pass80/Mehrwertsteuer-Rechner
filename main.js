@@ -34,8 +34,6 @@ const displayGrossAndTax = () => {
     displayTax.innerHTML = tax.toFixed(2);
     result = +enteredAmount.value + tax;
     displayAmount.innerHTML = result.toFixed(2);
-    amountNet.style.display = 'none';
-    amountGross.style.display = 'block';
 };
 
 //  put this block of code in a function to avoid code repetition
@@ -43,25 +41,19 @@ const displayNetAndTax = () => {
     displayAmount.innerHTML = result.toFixed(2);
     tax = +enteredAmount.value - result;
     displayTax.innerHTML = tax.toFixed(2);
-    amountGross.style.display = 'none';
-    amountNet.style.display = 'block';
 };
 
 const calculate = () => {
     if (netToGross.checked && percent_19.checked) {
-        title.innerHTML = title1;
         tax = (enteredAmount.value * 19) / 100;
         displayGrossAndTax();
     } else if (netToGross.checked && percent_7.checked) {
-        title.innerHTML = title1;
         tax = (enteredAmount.value * 7) / 100;
         displayGrossAndTax();
     } else if (grossToNet.checked && percent_19.checked) {
-        title.innerHTML = title2;
         result = enteredAmount.value / 1.19;
         displayNetAndTax();
     } else {
-        title.innerHTML = title2;
         result = enteredAmount.value / 1.07;
         displayNetAndTax();
     }

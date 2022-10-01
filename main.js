@@ -53,7 +53,7 @@ const calculate = () => {
     } else if (grossToNet.checked && percent_19.checked) {
         result = enteredAmount.value / 1.19;
         displayNetAndTax();
-    } else {
+    } else if (grossToNet.checked && percent_7.checked) {
         result = enteredAmount.value / 1.07;
         displayNetAndTax();
     }

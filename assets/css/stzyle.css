@@ -43,6 +43,11 @@ div {
     padding-bottom: 1rem;
 }
 
+.options div {
+    padding-left: 0;
+    padding-top: 0.5rem;
+}
+
 .value-selection {
     padding-top: 1rem;
     padding-bottom: 1rem;

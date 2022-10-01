@@ -90,6 +90,7 @@ div {
 .tax-amount div,
 .total-amount div {
     font-weight: 700;
+    padding-left: 0;
 }
 
 #amount-net {

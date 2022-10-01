@@ -8,43 +8,135 @@ header {
     text-align: center;
     padding-top: 5rem;
     padding-bottom: 2rem;
+    color: rgb(255, 94, 0);
+}
+
+h1 {
+    font-size: 2.5rem;
 }
 
 article {
     width: 50%;
-    height: 50vh;
+    font-size: 1.5rem;
     margin: 0 auto;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    color: #121618;
+    margin-bottom: 2rem;
+}
+
+input,
+label {
+    display: inline-block;
 }
 
 div {
     margin-top: 0.2rem;
-    padding: 1rem;
     background-color: rgb(185, 223, 239);
+    padding: 0 1rem;
 }
 
 .options {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: 0.3rem;
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+}
+
+.value-selection {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.value-selection label {
+    margin-top: 0.5rem;
+    margin-right: 0.5rem;
 }
 
 .amount {
     display: flex;
     flex-direction: column;
     gap: 0.3rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
 }
 
 .amount input:nth-of-type(1) {
     width: 20%;
     height: 2rem;
+    font-size: 1.4rem;
 }
 
 .amount input:nth-of-type(2) {
     height: 2rem;
+    background-color: #93b2bf;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.amount input:nth-of-type(2):active {
+    position: relative;
+    top: 0.08rem;
+    background-color: #819ca7;
+    color: rgb(255, 94, 0);
+}
+
+.tax-amount,
+.total-amount {
+    padding-left: 0;
+}
+
+.tax-amount div,
+.total-amount div {
+    font-weight: 700;
 }
 
 #amount-net {
     display: none;
+}
+
+.results {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+h4 {
+    color: #0c7ca9;
+}
+
+.results p {
+    padding-top: 1rem;
+}
+
+@media only screen and (max-width: 1075px) {
+    article {
+        width: 60%;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    article {
+        width: 70%;
+    }
+    .amount input:nth-of-type(1) {
+        width: 40%;
+    }
+}
+
+@media only screen and (max-width: 770px) {
+    article {
+        width: 90%;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    article {
+        width: 90%;
+        font-size: 1rem;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
 }

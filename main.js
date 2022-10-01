@@ -31,16 +31,16 @@ const showText2 = () => {
 
 //  put this block of code in a function to avoid code repetition
 const displayGrossAndTax = () => {
-    displayTax.innerHTML = tax.toFixed(2);
+    displayTax.innerHTML = tax.toFixed(2) + ' €';
     result = +enteredAmount.value + tax;
-    displayAmount.innerHTML = result.toFixed(2);
+    displayAmount.innerHTML = result.toFixed(2) + ' €';
 };
 
 //  put this block of code in a function to avoid code repetition
 const displayNetAndTax = () => {
-    displayAmount.innerHTML = result.toFixed(2);
+    displayAmount.innerHTML = result.toFixed(2) + ' €';
     tax = +enteredAmount.value - result;
-    displayTax.innerHTML = tax.toFixed(2);
+    displayTax.innerHTML = tax.toFixed(2) + ' €';
 };
 
 const calculate = () => {
